@@ -330,6 +330,27 @@
     0%, 100% { transform: translateX(0); }
     50% { transform: translateX(6px); }
   }
+  @media (max-width: 720px) {
+    .pipeline {
+      flex-direction: column;
+      flex-wrap: nowrap;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    .pipe-step {
+      width: 100%;
+      max-width: 320px;
+      text-align: center;
+    }
+    .pipe-arrow {
+      transform: rotate(90deg);
+      animation: arrow-pulse-down 1.5s ease-in-out infinite;
+    }
+  }
+  @keyframes arrow-pulse-down {
+    0%, 100% { transform: rotate(90deg) translateX(0); }
+    50% { transform: rotate(90deg) translateX(6px); }
+  }
 
   /* Fun list */
   .fun-list { list-style: none; padding: 0; text-align: left; width: 100%; max-width: 800px; margin: 1.5rem auto 0; }
