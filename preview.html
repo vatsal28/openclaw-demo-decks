@@ -347,12 +347,255 @@
       animation: arrow-pulse-down 1.5s ease-in-out infinite;
     }
   }
-  @keyframes arrow-pulse-down {
-    0%, 100% { transform: rotate(90deg) translateX(0); }
-    50% { transform: rotate(90deg) translateX(6px); }
-  }
+	  @keyframes arrow-pulse-down {
+	    0%, 100% { transform: rotate(90deg) translateX(0); }
+	    50% { transform: rotate(90deg) translateX(6px); }
+	  }
 
-  /* Fun list */
+	  /* Work samples */
+	  .sample-intro {
+	    max-width: 52ch;
+	    font-size: clamp(1rem, 1.4vw, 1.3rem);
+	    margin-bottom: 1.4rem;
+	    opacity: 0.82;
+	  }
+	  .artifact-grid {
+	    display: grid;
+	    grid-template-columns: repeat(6, minmax(0, 1fr));
+	    gap: 0.85rem;
+	    width: 100%;
+	    align-items: start;
+	  }
+	  .artifact-card {
+	    grid-column: span 2;
+	    min-height: 0;
+	    display: flex;
+	    flex-direction: column;
+	    justify-content: space-between;
+	    align-self: start;
+	    overflow: hidden;
+	    background: var(--cream);
+	    color: var(--ink);
+	    border: 3px solid var(--ink);
+	    border-radius: 20px;
+	    box-shadow: 5px 5px 0 var(--ink);
+	  }
+	  .artifact-card.wide { grid-column: span 3; }
+	  .artifact-preview {
+	    height: 132px;
+	    padding: 0.95rem;
+	    border-bottom: 3px solid var(--ink);
+	    background: #ffffff;
+	  }
+	  .artifact-copy { padding: 0.85rem 0.95rem 0.95rem; }
+	  .artifact-label {
+	    font-family: 'JetBrains Mono', monospace;
+	    font-size: 0.72rem;
+	    font-weight: 700;
+	    letter-spacing: 0.08em;
+	    text-transform: uppercase;
+	    color: var(--violet);
+	    margin-bottom: 0.35rem;
+	  }
+	  .artifact-copy h3 {
+	    font-size: clamp(1.05rem, 1.4vw, 1.35rem);
+	    line-height: 1.05;
+	    margin-bottom: 0.35rem;
+	  }
+	  .artifact-copy p {
+	    font-size: clamp(0.88rem, 1vw, 1rem);
+	    line-height: 1.28;
+	    opacity: 0.78;
+	  }
+	  .audio-sample {
+	    background: var(--ink);
+	    color: var(--cream);
+	    display: grid;
+	    gap: 0.75rem;
+	  }
+	  .audio-title {
+	    display: flex;
+	    align-items: center;
+	    justify-content: space-between;
+	    gap: 1rem;
+	    font-family: 'JetBrains Mono', monospace;
+	    font-size: 0.78rem;
+	  }
+	  .audio-pill {
+	    display: inline-flex;
+	    align-items: center;
+	    padding: 5px 9px;
+	    border-radius: 999px;
+	    background: var(--mint);
+	    color: var(--ink);
+	    font-weight: 800;
+	  }
+	  .audio-sample audio {
+	    width: 100%;
+	    height: 34px;
+	    filter: sepia(0.1) saturate(1.1);
+	  }
+	  .mini-wave {
+	    height: 28px;
+	    border-radius: 6px;
+	    background:
+	      linear-gradient(90deg, rgba(255,246,230,0.25), rgba(255,246,230,0.05)),
+	      repeating-linear-gradient(90deg, var(--cream) 0 3px, transparent 3px 8px);
+	    opacity: 0.7;
+	  }
+	  .image-sample {
+	    padding: 0;
+	    background: var(--ink);
+	  }
+	  .image-sample img {
+	    display: block;
+	    width: 100%;
+	    height: 132px;
+	    object-fit: cover;
+	  }
+	  .research-sample {
+	    background: #f6efe1;
+	    display: grid;
+	    gap: 0.55rem;
+	  }
+	  .browser-bar {
+	    height: 18px;
+	    border-radius: 999px;
+	    background: var(--ink);
+	    position: relative;
+	  }
+	  .browser-bar::before {
+	    content: "";
+	    position: absolute;
+	    left: 9px;
+	    top: 6px;
+	    width: 6px;
+	    height: 6px;
+	    border-radius: 50%;
+	    background: var(--coral);
+	    box-shadow: 11px 0 0 var(--canary), 22px 0 0 var(--mint);
+	  }
+	  .report-head {
+	    display: grid;
+	    grid-template-columns: 1.3fr 0.7fr;
+	    gap: 0.55rem;
+	  }
+	  .report-title {
+	    min-height: 48px;
+	    border-radius: 10px;
+	    background: var(--canary);
+	    border: 2px solid var(--ink);
+	    padding: 0.45rem;
+	    font-weight: 800;
+	    font-size: 0.9rem;
+	    line-height: 1.05;
+	  }
+	  .report-chart {
+	    border-radius: 10px;
+	    border: 2px solid var(--ink);
+	    background: repeating-linear-gradient(90deg, var(--blue) 0 12px, var(--pink) 12px 22px, var(--mint) 22px 32px);
+	  }
+	  .report-lines {
+	    display: grid;
+	    gap: 0.35rem;
+	  }
+	  .report-lines span {
+	    display: block;
+	    height: 9px;
+	    border-radius: 999px;
+	    background: rgba(15,10,31,0.18);
+	  }
+	  .report-lines span:nth-child(2) { width: 78%; }
+	  .report-lines span:nth-child(3) { width: 58%; }
+	  .home-sample {
+	    background: #0f0a1f;
+	    color: var(--cream);
+	    display: grid;
+	    gap: 0.55rem;
+	  }
+	  .home-top {
+	    display: flex;
+	    justify-content: space-between;
+	    align-items: center;
+	    font-family: 'JetBrains Mono', monospace;
+	    font-size: 0.72rem;
+	    opacity: 0.86;
+	  }
+	  .home-metrics {
+	    display: grid;
+	    grid-template-columns: repeat(3, 1fr);
+	    gap: 0.45rem;
+	  }
+	  .home-metric {
+	    border-radius: 10px;
+	    background: rgba(255,246,230,0.11);
+	    border: 1px solid rgba(255,246,230,0.24);
+	    padding: 0.5rem;
+	  }
+	  .home-metric b {
+	    display: block;
+	    font-size: 1.05rem;
+	    color: var(--canary);
+	  }
+	  .home-metric span {
+	    font-family: 'JetBrains Mono', monospace;
+	    font-size: 0.58rem;
+	    opacity: 0.78;
+	  }
+	  .home-task {
+	    border-radius: 10px;
+	    background: var(--mint);
+	    color: var(--ink);
+	    padding: 0.55rem;
+	    font-size: 0.78rem;
+	    font-weight: 800;
+	  }
+	  .ship-sample {
+	    background: #fbfbff;
+	    display: grid;
+	    gap: 0.45rem;
+	    font-family: 'JetBrains Mono', monospace;
+	    font-size: 0.75rem;
+	  }
+	  .commit-line {
+	    display: flex;
+	    justify-content: space-between;
+	    gap: 0.8rem;
+	    color: #326b29;
+	    font-weight: 800;
+	  }
+	  .diff-line {
+	    border-radius: 7px;
+	    padding: 0.38rem 0.5rem;
+	    background: #e9ffe7;
+	    border: 1px solid #a8daa2;
+	    color: #1e5b1b;
+	  }
+	  .diff-line.minus {
+	    background: #fff0f0;
+	    border-color: #efb5b5;
+	    color: #8c2424;
+	  }
+	  @media (max-width: 1000px) {
+	    .artifact-card,
+	    .artifact-card.wide { grid-column: span 3; }
+	  }
+	  @media (max-width: 720px) {
+	    .sample-intro { margin-bottom: 1rem; }
+	    .artifact-grid {
+	      grid-template-columns: 1fr;
+	      gap: 1rem;
+	    }
+	    .artifact-card,
+	    .artifact-card.wide {
+	      grid-column: span 1;
+	      min-height: 0;
+	    }
+	    .artifact-preview { min-height: 122px; }
+	    .home-metrics { grid-template-columns: 1fr; }
+	  }
+
+	  /* Fun list */
   .fun-list { list-style: none; padding: 0; text-align: left; width: 100%; max-width: 800px; margin: 1.5rem auto 0; }
   .fun-list li {
     padding: 0.7rem 0;
@@ -494,34 +737,99 @@
     </div>
   </section>
 
-  <!-- SLIDE 3: DEMO -->
-  <section class="slide bg-canary" data-slide="3">
-    <div class="content-wrap stagger">
-      <span class="tag">Watch</span>
-      <h2>Demo</h2>
-      <div class="pipeline">
-        <span class="pipe-step">📧 Gmail</span>
-        <span class="pipe-arrow">→</span>
-        <span class="pipe-step">AI filter</span>
-        <span class="pipe-arrow">→</span>
-        <span class="pipe-step">~2 min script</span>
-        <span class="pipe-arrow">→</span>
-        <span class="pipe-step">ElevenLabs MP3</span>
-        <span class="pipe-arrow">→</span>
-        <span class="pipe-step">📱 Voice note</span>
-      </div>
-      <div class="phone-mock">
-        <div class="notif-header"><span class="notif-dot"></span> Cloidberg · now</div>
-        <div class="notif-title">🎧 Your morning briefing</div>
-        <div class="notif-body">Today's top tech, read out loud in a broadcaster voice.</div>
-        <div class="play-row">
-          <div class="play-btn">▶</div>
-          <div class="wave"></div>
-          <div class="play-time">2:08</div>
-        </div>
-      </div>
-    </div>
-  </section>
+	  <!-- SLIDE 3: DEMO -->
+	  <section class="slide bg-canary" data-slide="3">
+	    <div class="content-wrap stagger">
+	      <span class="tag">Proof</span>
+	      <h2>Recent work samples.</h2>
+	      <p class="sample-intro">A few real outputs from the last week, with private data scrubbed or staged for the demo.</p>
+	      <div class="artifact-grid">
+	        <article class="artifact-card">
+	          <div class="artifact-preview audio-sample">
+	            <div class="audio-title">
+	              <span>Cloidberg voice briefing</span>
+	              <span class="audio-pill">MP3</span>
+	            </div>
+	            <div class="mini-wave"></div>
+	            <audio controls preload="metadata" src="assets/techmeme-dr-zoidberg-summary.mp3"></audio>
+	          </div>
+	          <div class="artifact-copy">
+	            <div class="artifact-label">Voice brief</div>
+	            <h3>Techmeme in my agent voice</h3>
+	            <p>Newsletter to short spoken summary, delivered as a Telegram audio file.</p>
+	          </div>
+	        </article>
+
+	        <article class="artifact-card">
+	          <div class="artifact-preview image-sample">
+	            <img src="assets/broll-contact-sheet.jpg" alt="Generated b-roll contact sheet for AI tooling visuals" />
+	          </div>
+	          <div class="artifact-copy">
+	            <div class="artifact-label">Visuals</div>
+	            <h3>B-roll image batch</h3>
+	            <p>Styled frames for short-form videos, reusable across scripts and edits.</p>
+	          </div>
+	        </article>
+
+	        <article class="artifact-card">
+	          <div class="artifact-preview research-sample" aria-label="Sanitized deep research report screenshot">
+	            <div class="browser-bar"></div>
+	            <div class="report-head">
+	              <div class="report-title">Tablet comparison report</div>
+	              <div class="report-chart"></div>
+	            </div>
+	            <div class="report-lines">
+	              <span></span>
+	              <span></span>
+	              <span></span>
+	            </div>
+	          </div>
+	          <div class="artifact-copy">
+	            <div class="artifact-label">Research</div>
+	            <h3>Deep research HTML</h3>
+	            <p>Readable recommendation reports with responsive layouts, not walls of text.</p>
+	          </div>
+	        </article>
+
+	        <article class="artifact-card wide">
+	          <div class="artifact-preview home-sample" aria-label="Sanitized Home OS dashboard screenshot">
+	            <div class="home-top">
+	              <span>Home OS</span>
+	              <span>Today</span>
+	            </div>
+	            <div class="home-metrics">
+	              <div class="home-metric"><b>26°</b><span>Weather</span></div>
+	              <div class="home-metric"><b>12.3k</b><span>Steps</span></div>
+	              <div class="home-metric"><b>2</b><span>Tasks</span></div>
+	            </div>
+	            <div class="home-task">Dinner, transit, calendar, and household ops in one calm screen.</div>
+	          </div>
+	          <div class="artifact-copy">
+	            <div class="artifact-label">Automation</div>
+	            <h3>Home OS dashboard</h3>
+	            <p>Tablet-friendly household command center, shown here with safe demo data.</p>
+	          </div>
+	        </article>
+
+	        <article class="artifact-card wide">
+	          <div class="artifact-preview ship-sample" aria-label="GitHub pull request screenshot">
+	            <div class="commit-line">
+	              <span>openclaw-demo-decks</span>
+	              <span>3b7df27</span>
+	            </div>
+	            <div class="diff-line">+ mobile pipeline stacks cleanly</div>
+	            <div class="diff-line">+ down arrows stay centered</div>
+	            <div class="diff-line minus">- diagonal card wrapping</div>
+	          </div>
+	          <div class="artifact-copy">
+	            <div class="artifact-label">Shipping</div>
+	            <h3>Code changes shipped</h3>
+	            <p>Small product fixes, commits, pushes, and verification without leaving chat.</p>
+	          </div>
+	        </article>
+	      </div>
+	    </div>
+	  </section>
 
   <!-- SLIDE 4: ROADMAP -->
   <section class="slide bg-pink" data-slide="4">
@@ -629,11 +937,15 @@
 
   counter.addEventListener('click', next);
 
-  if (!isMobile) {
-    slides[current].classList.add('active');
-  } else {
-    slides.forEach(s => s.classList.add('active'));
-  }
+	  if (!isMobile) {
+	    slides[current].classList.add('active');
+	  } else {
+	    slides.forEach(s => s.classList.add('active'));
+	    requestAnimationFrame(() => {
+	      const target = slides[current];
+	      if (target) target.scrollIntoView({ behavior: 'auto', block: 'start' });
+	    });
+	  }
   counter.textContent = pad(current + 1) + ' / ' + pad(total);
   progress.style.width = ((current + 1) / total * 100) + '%';
   if (help) help.classList.toggle('is-hidden', current !== 0);
