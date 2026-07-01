@@ -697,6 +697,16 @@
     display: block;
     margin: 0 auto;
   }
+  .live-mascot-only {
+    min-height: 100%;
+    display: grid;
+    place-items: center;
+  }
+  .live-mascot-only img {
+    width: min(72vw, 680px);
+    height: auto;
+    display: block;
+  }
   @media (max-width: 1180px) {
     .slide-art,
     .closing-art-img { opacity: 0.38; }
@@ -1173,12 +1183,12 @@
         <div class="workflow-card">
           <span class="emoji">🧭</span>
           <h3>Chief of staff</h3>
-          <p>Morning audio briefing, calendar-aware context, reminders, memory, and controlled crons.</p>
+          <p>Morning briefing, calendar-aware context, reminders, memory, and controlled crons.</p>
         </div>
         <div class="workflow-card">
           <span class="emoji">🤝</span>
           <h3>Personal assistant</h3>
-          <p>Gmail recovery, WhatsApp checks, Home OS, receipt-to-pantry, recipes, and household admin.</p>
+          <p>Email management, WhatsApp checks, Home OS, receipt-to-pantry, recipes, and household admin.</p>
         </div>
         <div class="workflow-card">
           <span class="emoji">🛠️</span>
@@ -1279,36 +1289,8 @@
 
   <!-- SLIDE 6: LIVE BEAT -->
   <section class="slide bg-canary" data-slide="6">
-    <div class="content-wrap stagger">
-      <span class="tag">Live beat</span>
-      <h2>Take a photo of this room. Ask the agent to turn it into a recap visual and post angle.</h2>
-      <div class="live-demo-grid">
-        <div class="live-demo-copy">
-          <div class="pipeline">
-            <span class="pipe-step">📸 Stage POV photo</span>
-            <span class="pipe-arrow">→</span>
-            <span class="pipe-step">Telegram to Cloidberg</span>
-            <span class="pipe-arrow">→</span>
-            <span class="pipe-step">Visual + post angle</span>
-            <span class="pipe-arrow">→</span>
-            <span class="pipe-step">Ready-to-share recap</span>
-          </div>
-          <div class="phone-mock">
-            <div class="notif-header"><span class="notif-dot"></span> Cloidberg · now</div>
-            <div class="notif-title">Make this stage POV useful</div>
-            <div class="notif-body">Create a clean ClawCon recap visual + LinkedIn angle from this photo. Keep it personal, not corporate.</div>
-            <div class="play-row">
-              <div class="play-btn">↗</div>
-              <div class="wave"></div>
-              <div class="play-time">live</div>
-            </div>
-          </div>
-        </div>
-        <div class="live-illustration" aria-hidden="true">
-          <img src="assets/slide6-live.png" alt="" aria-hidden="true" style="width:100%;max-width:430px;height:auto;display:block;margin:0 auto;" />
-        </div>
-      </div>
-      <p class="micro" style="text-align:center;">Backup: play the Gmail-to-audio briefing if venue Wi-Fi stalls.</p>
+    <div class="content-wrap live-mascot-only">
+      <img src="assets/slide6-live.png" alt="Cloidberg mascot taking a picture" />
     </div>
   </section>
 
